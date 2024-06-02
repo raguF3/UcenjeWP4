@@ -43,15 +43,17 @@ insert into knjige (naziv, autor, godina) values
 ('The Wicked King', 'Holly Black','2019-01-08'),
 ('The Queen of Nothing','Holly Black','2019-11-19'),
 ('Soul of a Witch', 'Harley Laroux','2023-08-31'),
-('Crowed','Rina Kent','2019-01-30');
+('Crowed','Rina Kent','2019-01-30'),
+('Scarred','Emily McIntire','2023-04-10');
 
 
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-02',1,'Osijek'),
-('2024-05-10',2,'Beli Manastir'),
-('2024-05-15',3,'Bilje'),
-('2024-05-20',4,'Belišce'),
-('2024-05-25',5,'Valpovo');
+('2024-05-02  14:30',1,'Osijek'),
+('2024-05-10  15:25',2,'Beli Manastir'),
+('2024-05-15  13:30',3,'Bilje'),
+('2024-05-20  14:00',4,'Belišce'),
+('2024-05-25  14:30',5,'Valpovo'),
+('2024-06-02  18:15',6,'Osijek');
 
 
 insert into clanovi (ime, prezime, email, lozinka, administrator) 
@@ -99,11 +101,10 @@ insert into dolasci (sastanak, clan) values
 insert into dolasci (sastanak, clan) values
 (5,2), (5,3),(5,4),(5,6),(5,7),(5,12),(5,16),(5,17),(5,18),(5,20),(5,23),(5,24),(5,26);
 
+insert into dolasci (sastanak, clan) values
+(6,1), (6,3),(6,5),(6,6),(6,7),(6,8),(6,9),(6,11),(6,14),(6,19),(6,21),(6,22),(6,26);
+
 select * from knjige;
 select * from sastanci;
 select * from clanovi;
 select * from dolasci;
-
-
-
-
