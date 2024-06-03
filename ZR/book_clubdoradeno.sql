@@ -10,7 +10,7 @@ create table knjige (
 sifra int not null primary key identity (1,1),
 naziv varchar (50) not null,
 autor varchar (50) not null,
-godina datetime,
+godina date,
 );
 
 create table sastanci (
@@ -25,7 +25,7 @@ sifra int not null primary key identity (1,1),
 ime varchar (50) not null,
 prezime varchar (50) not null,
 email varchar (50) not null,
-lozinka int,
+lozinka varchar (8) not null,
 administrator bit
 );
 
@@ -39,20 +39,30 @@ alter table dolasci add foreign key (sastanak) references sastanci (sifra);
 alter table sastanci add foreign key (knjiga) references knjige (sifra);
 
 insert into knjige (naziv, autor, godina) values 
-('The Cruel Princ','Holly Black', '2018-01-02'),
-('The Wicked King', 'Holly Black','2019-01-08'),
-('The Queen of Nothing','Holly Black','2019-11-19'),
-('Soul of a Witch', 'Harley Laroux','2023-08-31'),
-('Crowed','Rina Kent','2019-01-30'),
+('The Cruel Princ','Holly Black', '2018-01-02');
+insert into knjige (naziv, autor, godina) values 
+('The Wicked King', 'Holly Black','2019-01-08');
+insert into knjige (naziv, autor, godina) values 
+('The Queen of Nothing','Holly Black','2019-11-19');
+insert into knjige (naziv, autor, godina) values 
+('Soul of a Witch', 'Harley Laroux','2023-08-31');
+insert into knjige (naziv, autor, godina) values 
+('Crowed','Rina Kent','2019-01-30');
+insert into knjige (naziv, autor, godina) values 
 ('Scarred','Emily McIntire','2023-04-10');
 
 
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-02  14:30',1,'Osijek'),
-('2024-05-10  15:25',2,'Beli Manastir'),
-('2024-05-15  13:30',3,'Bilje'),
-('2024-05-20  14:00',4,'Belišce'),
-('2024-05-25  14:30',5,'Valpovo'),
+('2024-05-02  14:30',1,'Osijek');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-05-10  15:25',2,'Beli Manastir');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-05-15  13:30',3,'Bilje');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-05-20  14:00',4,'Belišce');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-05-25  14:30',5,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
 ('2024-06-02  18:15',6,'Osijek');
 
 
