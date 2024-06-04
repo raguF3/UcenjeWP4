@@ -62,6 +62,23 @@ insert into knjige (naziv, autor, godina) values
 ('The Mindfuck Series','S.T. Abby','2022-10-09');
 insert into knjige (naziv, autor, godina) values
 ('The Chalk Man','C.J. Tudor','2018-01-01');
+insert into knjige (naziv, autor, godina) values
+('the sun and her flowers','Rupi Kaur','2018-09-18');
+insert into knjige (naziv, autor, godina) values
+('Dark Matter','Blake Crouch','2016-06-26');
+insert into knjige (naziv, autor, godina) values
+('Ward D','Freida McFadden','2023-05-08');
+insert into knjige (naziv, autor, godina) values
+('Lured','Rina Kent','2019-05-19');
+insert into knjige (naziv, autor, godina) values
+('Restrain Me','Michelle Heard','2023-05-04');
+insert into knjige (naziv, autor, godina) values
+('Fractured Freedom','Shain Rose','2022-06-21');
+insert into knjige (naziv, autor, godina) values
+insert into knjige (naziv, autor, godina) values
+insert into knjige (naziv, autor, godina) values
+insert into knjige (naziv, autor, godina) values
+insert into knjige (naziv, autor, godina) values
 
 
 
