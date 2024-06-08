@@ -75,10 +75,15 @@ insert into knjige (naziv, autor, godina) values
 insert into knjige (naziv, autor, godina) values
 ('Fractured Freedom','Shain Rose','2022-06-21');
 insert into knjige (naziv, autor, godina) values
+('Moriarty','Anthony Horowitz','2014-10-23');
 insert into knjige (naziv, autor, godina) values
+('Born a Crime','Trevor Noah','2016-11-15');
+insert into knjige (naziv, autor, godina) values 
+('The Cenci','Percy Bysshe Shelley','1819-01-01');
 insert into knjige (naziv, autor, godina) values
+('Frivolous','Veronica Lancert','2021-07-30');
 insert into knjige (naziv, autor, godina) values
-insert into knjige (naziv, autor, godina) values
+('Bound by Vengeance','Cora Reilly','2017-01-20');
 
 
 
@@ -107,6 +112,28 @@ insert into sastanci (datum, knjiga, mjesto) values
 ('2024-07-10  18:15',11,'Kozarac');
 insert into sastanci (datum, knjiga, mjesto) values 
 ('2024-07-20  19:30',12,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-29  19:00',13,'Baranjsko Petrovo Selo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-08-06  20:30',14,'Čepin');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-08-18  11:30',15,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-08-26  19:15',16,'Osijek');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-09-07  19:30',17,'Beli Manastir');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',18,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',19,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',20,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',21,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',22,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-07-20  19:30',23,'Valpovo');
 
 
 
@@ -164,6 +191,29 @@ insert into dolasci (sastanak, clan) values
 (11,5), (11,6),(11,9),(11,12),(11,14),(11,18),(11,19),(11,20),(11,21),(11,22),(11,24),(11,25),(11,26);
 insert into dolasci (sastanak, clan) values
 (12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+insert into dolasci (sastanak, clan) values
+(12,1), (12,4),(12,5),(12,6),(12,7),(12,12),(12,13),(12,14),(12,15),(12,19),(12,20),(12,22),(12,26);
+
 
 select * from knjige;
 select * from sastanci;
