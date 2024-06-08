@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.X509Certificates;
 
 namespace WebAPI.Controllers
 {
@@ -28,6 +29,17 @@ namespace WebAPI.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+
+
+            [HttpPost]
+            [Route("hello")] 
+
+
+            {
+
+                return "Hello World ";
+            
+            }
         }
     }
 }
