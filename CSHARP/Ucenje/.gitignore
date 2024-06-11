@@ -1,5 +1,10 @@
 UcenjeCS/bin
 UcenjeCS/obj
+<<<<<<< HEAD
 WebAPI/bin
 WebAPI/obj
+=======
+WebApi/bin
+WebApi/obj
+>>>>>>> 6f1f6cd3cedc1913ed80485b5ee23ac75e1b49bc
 .vs

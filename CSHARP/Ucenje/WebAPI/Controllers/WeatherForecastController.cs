@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
+=======
+using System.Security.Cryptography.X509Certificates;
+>>>>>>> 6f1f6cd3cedc1913ed80485b5ee23ac75e1b49bc
 
 namespace WebAPI.Controllers
 {
@@ -24,6 +28,7 @@ namespace WebAPI.Controllers
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+<<<<<<< HEAD
                 TemperatureC = 18,
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
@@ -38,4 +43,23 @@ namespace WebAPI.Controllers
 
         }
 }
+=======
+                TemperatureC = 19,
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+
+
+            [HttpPost]
+            [Route("hello")] 
+
+
+            {
+
+                return "Hello World ";
+            
+            }
+        }
+    }
+>>>>>>> 6f1f6cd3cedc1913ed80485b5ee23ac75e1b49bc
 }
