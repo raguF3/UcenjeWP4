@@ -18,9 +18,6 @@ namespace UcenjeCS
             Console.WriteLine("unesi drugi broj: ");
             b[1] = float.Parse(Console.ReadLine());
 
-            Console.WriteLine(
-b[1] == b[0] ? "jednaki su"
-b[0] > );
 
         }
     }
