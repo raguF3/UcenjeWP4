@@ -5,6 +5,12 @@ using UcenjeCS;
 
 
 
+
+
+
+E01Z2.Izvedi();
+//E02VarijableTipoviPodatakaOperatori.Izvedi();
+
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
 //E05Nizovi.Izvedi();
 //E04Z1.Izvedi();
