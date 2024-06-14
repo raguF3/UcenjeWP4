@@ -11,18 +11,18 @@ namespace UcenjeCS
         public static void Izvedi()
         {
             //kalkulator
-            // Tražimo od korisnika da unese dva broja
+            
             Console.WriteLine("Unesite prvi broj:");
             double broj1 = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Unesite drugi broj:");
             double broj2 = double.Parse(Console.ReadLine());
 
-            // Tražimo od korisnika da unese željenu operaciju
+           
             Console.WriteLine("Unesite operaciju (+, -, *, /):");
             char operacija = Console.ReadLine()[0];
 
-            // Koristimo switch da izvršimo odgovarajuću operaciju
+            
             switch (operacija)
             {
                 case '+':
@@ -41,11 +41,11 @@ namespace UcenjeCS
                     }
                     else
                     {
-                        Console.WriteLine("Greška: Deljenje sa nulom nije dozvoljeno.");
+                        Console.WriteLine("Greška: Dijeljenje sa nulom nije dozvoljeno.");
                     }
                     break;
                 default:
-                    Console.WriteLine("Greška: Nevažeća operacija.");
+                    Console.WriteLine("Greška: Operacija nije moguća.");
                     break;
 
 
