@@ -51,6 +51,37 @@ namespace UcenjeCS
 
 
             }
+            //kalkulator tjelesne mase (BMI)
+                // Tražimo od korisnika da unese težinu i visinu
+                Console.WriteLine("Unesite težinu (kg):");
+                double tezina = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Unesite visinu (m):");
+                double visina = double.Parse(Console.ReadLine());
+
+                // Izračun BMI
+                double bmi = tezina / (visina * visina);
+
+                // Ispis rezultata na osnovu BMI kategorije
+                if (bmi < 18.5)
+                {
+                    Console.WriteLine($"BMI je {bmi:F2}. Nedovoljna težina.");
+                }
+                else if (bmi >= 18.5 && bmi <= 24.9)
+                {
+                    Console.WriteLine($"BMI je {bmi:F2}. Normalna težina.");
+                }
+                else if (bmi >= 25 && bmi <= 29.9)
+                {
+                    Console.WriteLine($"BMI je {bmi:F2}. Prekomjerna težina.");
+                }
+                else // bmi >= 30
+                {
+                    Console.WriteLine($"BMI je {bmi:F2}. Pretilost.");
+                }
+            
         }
+
     }
 }
+
