@@ -29,9 +29,36 @@ namespace UcenjeCS
                 default: //to je else u if-u
                     Console.WriteLine("Nije definirano");
                     break;
-                   
+
                     // korisnik unosi brojčani iznos ocjene. Program ispisuje
                     //Tekstualno ocjenu
+            }
+
+            int ocjena;
+            Console.WriteLine("Unesi ocjenu u brojčanom obliku: ");
+            ocjena = int.Parse(Console.ReadLine());
+
+            switch (ocjena)
+            {
+                case 1:
+                    Console.WriteLine("Nedovoljan");
+                    break;
+                case 2:
+                    Console.WriteLine("Dovoljan");
+                    break;
+                case 3:
+                    Console.WriteLine("Dobar");
+                    break;
+                case 4:
+                    Console.WriteLine("Vrlo Dobar");
+                    break;
+                case 5:
+                    Console.WriteLine("Odličan");
+                    break;
+                default:
+                    Console.WriteLine("Nije određeno");
+                    break;
+
             }
         }
     }

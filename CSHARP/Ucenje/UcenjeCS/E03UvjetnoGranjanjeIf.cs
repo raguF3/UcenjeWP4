@@ -14,7 +14,7 @@ namespace UcenjeCS
         {
 
 
-            int i = 8;
+            int i = 8;  //nema console.readline kako bi bili brži
 
             bool uvjet = i == 7;
 

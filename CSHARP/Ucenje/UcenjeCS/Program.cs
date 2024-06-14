@@ -4,11 +4,12 @@
 using UcenjeCS;
 
 
+E03Z2.Izvedi();
 
-
-
-
-E01Z2.Izvedi();
+//E05Nizovi.Izvedi();
+//E04UvjetnoGranjanjeSwitch.Izvedi();
+//E03UvjetnoGranjanjeIf.Izvedi();
+//E01Z2.Izvedi();
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
 
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
