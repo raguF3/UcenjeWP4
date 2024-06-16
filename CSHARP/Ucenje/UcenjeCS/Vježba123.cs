@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -52,12 +54,27 @@ namespace UcenjeCS
 
             }
             //kalkulator tjelesne mase (BMI)
-                // Tražimo od korisnika da unese težinu i visinu
-                Console.WriteLine("Unesite težinu (kg):");
-                double tezina = double.Parse(Console.ReadLine());
+            // Tražimo od korisnika da unese težinu i visinu
+           
 
+           
+                double tezina, visina;
+
+                // Unos težine
+                Console.WriteLine("Unesite težinu (kg):");
+                if (!double.TryParse(Console.ReadLine(), out tezina) || tezina <= 0)
+                {
+                    Console.WriteLine("Nevažeći unos za težinu.");
+                    return;
+                }
+
+                // Unos visine
                 Console.WriteLine("Unesite visinu (m):");
-                double visina = double.Parse(Console.ReadLine());
+                if (!double.TryParse(Console.ReadLine(), out visina) || visina <= 0)
+                {
+                    Console.WriteLine("Nevažeći unos za visinu.");
+                    return;
+                }
 
                 // Izračun BMI
                 double bmi = tezina / (visina * visina);
@@ -79,9 +96,47 @@ namespace UcenjeCS
                 {
                     Console.WriteLine($"BMI je {bmi:F2}. Pretilost.");
                 }
-            
+
+
+            // upisati pozdrav
+
+            Console.WriteLine("Upiši svoje ime: ");
+            string ime= Console.ReadLine();
+
+            Console.WriteLine($"Pozdrav, {ime}");
+
+
+
+            //računjanje zbroja i prosjek brojeva
+
+
+            Console.WriteLine("Unesi prvi broj: ");
+            int b1;
+            b1=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Unesi drugi broj: ");
+            int b2;
+            b2=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Unesi treći broj: ");
+            int b3;
+            b3=int.Parse(Console.ReadLine());
+
+            //Console.WriteLine(b1+b2+b3);
+            double zbroj = b1 + b2 + b3;
+            double prosjek = zbroj / 3;
+
+            Console.WriteLine($"Zbroj brojeva je {zbroj}");
+            Console.WriteLine($"Prosjek brojeva je {prosjek}");
+
+
+
+        }
         }
 
+
     }
-}
+
+
+
 

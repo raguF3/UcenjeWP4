@@ -14,7 +14,7 @@ using UcenjeCS;
 
 
 
-
+Vježba123.Izvedi();
 
 
 //E05Z3.Izvedi();
