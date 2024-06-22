@@ -84,56 +84,75 @@ insert into knjige (naziv, autor, godina) values
 ('Frivolous','Veronica Lancert','2021-07-30');
 insert into knjige (naziv, autor, godina) values
 ('Bound by Vengeance','Cora Reilly','2017-01-20');
+insert into knjige (naziv, autor, godina) values
+('Call me by your name','André Aciman','2007-01-23');
+insert into knjige (naziv, autor, godina) values
+('A Dogs Purpose','W. Bruce Cameron','2010-06-10');
+insert into knjige (naziv, autor, godina) values
+('God of War','Rina Kent','2024-06-13');
+insert into knjige (naziv, autor, godina) values
+('Vicious','Lj Shen','2016-12-27');
+insert into knjige (naziv, autor, godina) values
+('The Office Rival','Kat T. Masen','2015-09-25');
 
 
 
 
+
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-02  14:30',1,'Osijek');
+('2024-03-02  14:30',1,'Osijek');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-10  15:25',2,'Beli Manastir');
+('2024-03-10  15:25',2,'Beli Manastir');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-15  13:30',3,'Bilje');
+('2024-03-15  13:30',3,'Bilje');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-20  14:00',4,'Belišce');
+('2024-03-20  14:00',4,'Belišce');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-05-25  14:30',5,'Valpovo');
+('2024-03-25  14:30',5,'Valpovo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-06-02  18:15',6,'Osijek');
+('2024-04-02  18:15',6,'Osijek');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-06-08  19:00',7,'Osijek');
+('2024-04-08  19:00',7,'Osijek');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-06-15  12:15',8,'Beli Manastir');
+('2024-04-15  12:15',8,'Beli Manastir');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-06-23  20:15',9,'Đakovo');
+('2024-04-23  20:15',9,'Đakovo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-06-30  14:20',10,'Čepin');
+('2024-04-30  14:20',10,'Čepin');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-07-10  18:15',11,'Kozarac');
+('2024-05-10  18:15',11,'Kozarac');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-07-20  19:30',12,'Valpovo');
+('2024-05-20  19:30',12,'Valpovo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-07-29  19:00',13,'Baranjsko Petrovo Selo');
+('2024-05-29  19:00',13,'Baranjsko Petrovo Selo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-08-06  20:30',14,'Čepin');
+('2024-06-06  20:30',14,'Čepin');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-08-18  11:30',15,'Valpovo');
+('2024-06-18  11:30',15,'Valpovo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-08-26  19:15',16,'Osijek');
+('2024-06-26  19:15',16,'Osijek');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-09-07  19:30',17,'Beli Manastir');
+('2024-07-07  19:30',17,'Beli Manastir');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-09-17  19:30',18,'Darda');
+('2024-07-17  19:30',18,'Darda');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-09-27  15:30',19,'Bilje');
+('2024-07-27  15:30',19,'Bilje');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-10-10  12:00',20,'Kopačevo');
+('2024-08-10  12:00',20,'Kopačevo');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-10-20  19:00',21,'Donji Miholjac');
+('2024-08-20  19:00',21,'Donji Miholjac');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-10-27  19:30',22,'Osijek');
+('2024-08-27  19:30',22,'Osijek');
 insert into sastanci (datum, knjiga, mjesto) values 
-('2024-11-10  20:30',23,'Valpovo');
+('2024-09-10  20:30',23,'Valpovo');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-09-20  20:00',24,'Osijek');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-09-29  19:00',25,'Beli Manastir');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-10-09  20:00',26,'Osijek');
+insert into sastanci (datum, knjiga, mjesto) values 
+('2024-10-20  16:00',27,'Osijek');
 
 
 
@@ -213,6 +232,14 @@ insert into dolasci (sastanak, clan) values
 (22,2), (22,3),(22,5),(22,6),(22,8),(22,12),(22,13),(22,15),(22,16),(22,17),(22,20),(22,21),(22,22);
 insert into dolasci (sastanak, clan) values
 (23,1), (23,4),(23,5),(23,6),(23,7),(23,12),(23,13),(23,14),(23,15),(23,19),(23,20),(23,22),(23,23);
+insert into dolasci (sastanak, clan) values
+(24,1), (24,2),(24,5),(24,6),(24,7),(24,12),(24,13),(24,14),(24,15),(24,19),(24,20),(24,22),(24,23);
+insert into dolasci (sastanak, clan) values
+(25,1), (25,4),(25,6),(25,7),(25,8),(25,9),(25,13),(25,14),(25,15),(25,19),(25,20),(25,22),(25,23);
+insert into dolasci (sastanak, clan) values
+(26,2), (26,4),(26,5),(26,6),(26,7),(26,12),(26,13),(26,14),(26,15),(26,19),(26,20),(26,22),(26,23);
+insert into dolasci (sastanak, clan) values
+(27,1), (27,4),(27,5),(27,6),(27,7),(27,12),(27,13),(27,14),(27,15),(27,19),(27,20),(27,22),(27,23);
 
 
 select * from knjige;
