@@ -13,8 +13,8 @@ using UcenjeCS;
 
 
 
-
-Vježba123.Izvedi();
+E06ForPetlja.Izvedi();
+//ježba123.Izvedi();
 
 
 //E05Z3.Izvedi();
@@ -23,7 +23,7 @@ Vježba123.Izvedi();
 //E01Z7.Izvedi();
 //E01Z8.Izvedi();
 //E01Z9.Izvedi();
-E03Z3.Izvedi();
+//E03Z3.Izvedi();
 //E03Z4.Izvedi();
 
 
