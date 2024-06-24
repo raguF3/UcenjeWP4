@@ -148,9 +148,25 @@ namespace UcenjeCS
 
         labela:
             Console.WriteLine("********************");
+            Console.WriteLine(int.MaxValue);
+            int max = int.MaxValue;
+            Console.WriteLine(max+1);
 
+            int broj;
+            for (; ; )
+            {
+                Console.WriteLine("Unesi broje od 1 do 10: ");
+                broj=int.Parse(Console.ReadLine());
+                if (broj < 1 || broj > 10)
+                {
+                    Console.WriteLine("Nisi unio broj u rasponu: ");
+                    continue;
 
+                }
+                break;
+            }
 
+            Console.WriteLine(broj);
 
         }
 
