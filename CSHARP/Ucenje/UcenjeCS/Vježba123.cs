@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 using System.Security.Principal;
@@ -12,6 +13,7 @@ namespace UcenjeCS
     {
         public static void Izvedi()
         {
+            /*
             //kalkulator
             
             Console.WriteLine("Unesite prvi broj:");
@@ -128,7 +130,74 @@ namespace UcenjeCS
 
             Console.WriteLine($"Zbroj brojeva je {zbroj}");
             Console.WriteLine($"Prosjek brojeva je {prosjek}");
+            */
 
+            Console.WriteLine("************************");
+
+            {
+                int size = 5;
+                int[,] table = new int[size, size];
+                FillSpiralTable(table, size);
+                PrintTable(table, size);
+            }
+
+            static void FillSpiralTable(int[,] table, int size)
+            {
+                int maxNumber = 25;
+                int currentNumber = 1;
+                int top = 0, bottom = size - 1;
+                int left = 0, right = size - 1;
+
+                while (top <= bottom && left <= right)
+                {
+                    // Popunjavajte gornji red s lijeva na desno
+                    for (int i = left; i <= right; i++)
+                    {
+                        table[top, i] = currentNumber++;
+                        if (currentNumber > maxNumber) currentNumber = 1;
+                    }
+                    top++;
+
+                    // Popunjavajte desni stupac odozgo prema dolje
+                    for (int i = top; i <= bottom; i++)
+                    {
+                        table[i, right] = currentNumber++;
+                        if (currentNumber > maxNumber) currentNumber = 1;
+                    }
+                    right--;
+
+                    // Popunjavajte donji red zdesna nalijevo
+                    for (int i = right; i >= left; i--)
+                    {
+                        table[bottom, i] = currentNumber++;
+                        if (currentNumber > maxNumber) currentNumber = 1;
+                    }
+                    bottom--;
+
+                    // Popunjavajte lijevi stupac odozdo prema gore
+                    for (int i = bottom; i >= top; i--)
+                    {
+                        table[i, left] = currentNumber++;
+                        if (currentNumber > maxNumber) currentNumber = 1;
+                    }
+                    left++;
+                }
+            }
+
+            static void PrintTable(int[,] table, int size)
+            {
+                for (int i = 0; i < size; i++)
+                {
+                    for (int j = 0; j < size; j++)
+                    {
+                        Console.Write(table[i, j].ToString("D2") + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+
+           
 
 
         }
