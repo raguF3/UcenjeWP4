@@ -148,6 +148,7 @@ namespace UcenjeCS
 
         labela:
             Console.WriteLine("********************");
+           /*
             Console.WriteLine(int.MaxValue);
             int max = int.MaxValue;
             Console.WriteLine(max+1);
@@ -167,8 +168,53 @@ namespace UcenjeCS
             }
 
             Console.WriteLine(broj);
+           */
+            Console.WriteLine("********************");
 
+            niz = PodaciInt.niz;
+
+            Console.WriteLine(niz.Length);
+            /*
+            for(int i = 0;i < niz.Length;i++)
+            { 
+                Console.WriteLine(niz[i]);
+            }*/
+
+            //postoji li dva ista broja
+            /*
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (i % 10000 == 0)
+                {
+                    Console.WriteLine("*********************");
+                }
+                    
+                    
+                for (int j = i+1; j < niz.Length; j++)
+                {
+                    if (niz[i] == niz[j])
+                    {
+                        Console.WriteLine(niz[i]);
+                        
+                    }
+                }
+            }
+            
+            Console.WriteLine("*************************");
+            */
+
+            string[] imena = PodaciString.Niz;
+            Console.WriteLine(imena.Length);
+
+            //string je niz, niz znakova
+            string grad = "Osijek";
+
+            Console.WriteLine(grad[0]);
+
+            Console.WriteLine(grad[grad.Length -1]);
         }
 
+         
     }
 }
+
