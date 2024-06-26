@@ -21,7 +21,7 @@ namespace UcenjeCS
             //  8  16  24  32  40  48  56  64  72  80
             //  9  18  27  36  45  54  63  72  81  90
             // 10  20  30  40  50  60  70  80  90 100
-
+            /*
 
             for (int i = 1; i <= 10; i++)
             {
@@ -31,8 +31,54 @@ namespace UcenjeCS
                 }
                 Console.WriteLine();
             }
+            */
 
+            Console.Write("Unesite broj redaka: ");
+            int redaka = int.Parse(Console.ReadLine());
+            Console.Write("Unesite broj stupaca: ");
+            int stupaca = int.Parse(Console.ReadLine());
 
+            
+            int[,] tablica = new int[redaka, stupaca];
+
+            int broj = 1; 
+
+            int top = 0, bottom = redaka - 1, left = 0, right = stupaca - 1;
+
+            while (top <= bottom && left <= right)
+            {
+                
+                for (int i = right; i >= left; i--)
+                    tablica[bottom, i] = broj++;
+                bottom--;
+
+                
+                for (int i = bottom; i >= top; i--)
+                    tablica[i, left] = broj++;
+                left++;
+
+                
+                for (int i = left; i <= right; i++)
+                    tablica[top, i] = broj++;
+                top++;
+
+               
+                for (int i = top; i <= bottom; i++)
+                    tablica[i, right] = broj++;
+                right--;
+            }
+
+            
+            for (int i = 0; i < redaka; i++)
+            {
+                for (int j = 0; j < stupaca; j++)
+                {
+                    Console.Write(tablica[i, j] + "\t");
+                }
+                Console.WriteLine();
+
+            }
         }
     }
 }
+
