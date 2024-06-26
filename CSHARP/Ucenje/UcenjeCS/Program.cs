@@ -11,10 +11,10 @@ using UcenjeCS;
 
 
 
-DZ.Izvedi();
+//DZ.Izvedi();
 
 //E06ForPetlja.Izvedi();
-//Vježba123.Izvedi();
+Vježba123.Izvedi();
 
 
 //E05Z3.Izvedi();
