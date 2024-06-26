@@ -11,7 +11,7 @@ using UcenjeCS;
 
 
 
-
+DZ.Izvedi();
 
 //E06ForPetlja.Izvedi();
 //Vježba123.Izvedi();
