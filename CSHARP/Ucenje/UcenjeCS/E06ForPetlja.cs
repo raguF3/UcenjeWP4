@@ -8,12 +8,9 @@ namespace UcenjeCS
 {
     internal class E06ForPetlja
     {
-        internal static void Izvedi()
-        {
-            Izvedi(0);
-        }
+     
 
-        internal static void Izvedi(int v)
+        internal static void Izvedi()
         {
            
             // Ispiši 10 puta Osijek
