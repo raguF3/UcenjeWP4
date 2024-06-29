@@ -9,8 +9,17 @@ using UcenjeCS;
 
 
 
+
+
+E10Z2.Izvedi();
+
+//E10Z1.Izvedi();
+//E10TryCatch.Izvedi();
+//E09RorEachPetlja.Izvedi();
+//E08DoWhilePetlja.Izvedi();
+//E07Z1.Izvedi();
 //Zadaci.Izvedi();
-E07WhilePetlja.Izvedi();
+//E07WhilePetlja.Izvedi();
 //DZ.Izvedi();
 
 //E06ForPetlja.Izvedi();
