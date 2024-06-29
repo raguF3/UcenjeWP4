@@ -9,9 +9,9 @@ using UcenjeCS;
 
 
 
-
-
-DZ.Izvedi();
+//Zadaci.Izvedi();
+E07WhilePetlja.Izvedi();
+//DZ.Izvedi();
 
 //E06ForPetlja.Izvedi();
 //Vježba123.Izvedi();
