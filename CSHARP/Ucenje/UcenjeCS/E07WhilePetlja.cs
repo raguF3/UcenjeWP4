@@ -36,7 +36,7 @@ namespace UcenjeCS
             {
                 Console.WriteLine(b); 
             }
-            Console.WriteLine("Nakon petrlj: " + b);
+            Console.WriteLine("Nakon petrlje: " + b);
 
 
             Console.WriteLine("************************");
@@ -44,11 +44,13 @@ namespace UcenjeCS
             brojDo = 10;
             b = 1;
             int j = 2;
-            while(j>b && j<brojDo)
+            while(j>b && j<brojDo) // može ići i || te !
             {
                 Console.WriteLine(j++);
             }
             Console.WriteLine("*************************");
+
+            //isto se gnijezfi i prekida iznutra prema van s go to label 
         }
     }
 }
