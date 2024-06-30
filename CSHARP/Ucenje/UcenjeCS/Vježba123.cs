@@ -197,31 +197,7 @@ namespace UcenjeCS
             }
             */
 
-            Console.Write("Unesite veličinu tablice množenja: ");
-            int N = int.Parse(Console.ReadLine());
-
-            
-            int[,] tablicaMnozenja = new int[N, N];
-
            
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N; j++)
-                {
-                    tablicaMnozenja[i, j] = (i + 1) * (j + 1);
-                }
-            }
-
-           
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < N; j++)
-                {
-                    Console.Write(tablicaMnozenja[i, j] + "\t");
-                }
-                Console.WriteLine();
-
-            }
 
 
 
