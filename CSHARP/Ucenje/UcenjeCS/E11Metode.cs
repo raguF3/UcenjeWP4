@@ -36,6 +36,20 @@ namespace UcenjeCS
 
             Console.WriteLine(Tip4(2,8));
 
+
+            //ispiši sve prim brojeve od dva unesena broja
+            int odBroja = Pomocno.UcitajCijeliBroj("Unesi od broja: ");
+            int doBroja = Pomocno.UcitajCijeliBroj("Unesi do broja: ");
+            for (int i = odBroja;
+                i <doBroja; i++)
+            {
+                if(primBroj(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+
         }
 
         //tip 1. metoda ne prima parametre i ne vraća vrijednost
@@ -100,5 +114,19 @@ namespace UcenjeCS
             return suma;
         
         }
+
+        // primjer metode s više izraza
+        static bool primBroj(int broj)
+        {
+            for (int i = 2; i<broj; i++)
+            {
+                if(broj % i==0)
+                {
+                    return false; 
+                }
+            }
+            return true;
+        }
+
     }
 }
