@@ -2,14 +2,14 @@
 
 
 using UcenjeCS;
+using UcenjeCS.Zadaci;
 
 
 
 
-
-
-
-E12Rekurzija.Izvedi();
+//iklicnaTablica.Izvedi();
+TablicaMnozenja.Izvedi();
+//E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();
 //E10Z2.Izvedi();
 //E11Metode.Izvedi();
