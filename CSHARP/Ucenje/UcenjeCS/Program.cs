@@ -11,7 +11,7 @@ using UcenjeCS.Zadaci;
 
 
 
-
+//Vježba123.Izvedi();
 
 LjubavniKalkulator.Izvedi();
 //iklicnaTablica.Izvedi();
