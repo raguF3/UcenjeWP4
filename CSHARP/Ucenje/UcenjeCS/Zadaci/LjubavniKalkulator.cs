@@ -38,7 +38,7 @@ namespace UcenjeCS.Zadaci
                     noviBrojevi.Add(zbroj % 10);
                 }
 
-                // Ako je broj brojeva neparan, dodaj središnji broj bez promjene
+                
                 if (brojevi.Count % 2 != 0)
                 {
                     noviBrojevi.Add(brojevi[brojevi.Count / 2]);
