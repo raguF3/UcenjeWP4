@@ -12,6 +12,6 @@ namespace UcenjeCS.E13KlasaObjekt.Citateljskiklub
         public string? naziv {  get; set; }
         public string? autor {  get; set; }
         public DateTime? godina { get; set; }
-        public DateTime? godina { get; set; }
+       
     }
 }

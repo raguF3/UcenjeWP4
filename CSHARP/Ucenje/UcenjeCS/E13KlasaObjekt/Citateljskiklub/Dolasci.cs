@@ -10,6 +10,6 @@ namespace UcenjeCS.E13KlasaObjekt.Citateljskiklub
     {
         public int? sastanak {  get; set; }
         public int? clan {  get; set; }
-        public int? clan {  get; set; }
+      
     }
 }
