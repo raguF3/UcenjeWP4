@@ -27,17 +27,17 @@ namespace UcenjeCS.Zadaci
             {
 
                 for (int i = right; i >= left; i--)
-                    tablica[bottom, i] = broj++;
+                    tablica[bottom, i] = broj++; 
                 bottom--;
 
 
                 for (int i = bottom; i >= top; i--)
-                    tablica[i, left] = broj++;
+                    tablica[i, left] = broj++; 
                 left++;
 
 
                 for (int i = left; i <= right; i++)
-                    tablica[top, i] = broj++;
+                    tablica[top, i] = broj++; 
                 top++;
 
 

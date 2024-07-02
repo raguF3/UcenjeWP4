@@ -21,8 +21,8 @@ using UcenjeCS.Zadaci;
 
 //Vježba123.Izvedi();
 
-LjubavniKalkulator.Izvedi();
-//iklicnaTablica.Izvedi();
+//LjubavniKalkulator.Izvedi();
+CiklicnaTablica.Izvedi();
 //TablicaMnozenja.Izvedi();
 //E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();

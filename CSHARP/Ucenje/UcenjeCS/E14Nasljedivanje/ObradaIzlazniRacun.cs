@@ -12,7 +12,7 @@ namespace UcenjeCS.E14Nasljedivanje
         public override void Procesuiraj()
         {
             Console.WriteLine("Vidi tko je kupac");
-            Console.WriteLine("Vidi iznos računa");
+            Console.WriteLine("Pošalji račun");
         }
     }
 }
