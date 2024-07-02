@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using UcenjeCS.E13KlasaObjekt.Edunova;
 
 namespace UcenjeCS.E13KlasaObjekt
 {
@@ -55,11 +56,17 @@ namespace UcenjeCS.E13KlasaObjekt
 
             Console.WriteLine(o.Mjesto?.Naziv ?? "Nema");
 
-            
+            Console.WriteLine(o.Mjesto?.Zupanija?.Drzava?.Naziv ?? "ne zna,");
 
 
 
-            
+            Smjer smjer = new Smjer();
+            smjer.naziv = "Web programiranje";
+
+            Grupa grupa = new() { naziv = "WP4", smjer = smjer };
+            Console.WriteLine(grupa.smjer.naziv);
+
+
 
 
 
