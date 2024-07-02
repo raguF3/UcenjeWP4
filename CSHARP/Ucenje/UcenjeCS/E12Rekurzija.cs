@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS
 {
+    
+
     internal class E12Rekurzija  //rekurzija kada metoda poziva samu sebe uz uvjet prekida rekurzije
     {
         // Rekurzija je kada metoda poziva samu sebe - nedovoljna definicija
 
-        public static void Izvedi()
+        //objekt je instanca klase. klasa je opisnik objekta
+
+        public static void Izvedi()    
         {
             do
             {
