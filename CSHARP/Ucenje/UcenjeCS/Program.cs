@@ -12,7 +12,7 @@ using UcenjeCS.Zadaci;
 
 
 
-new UcenjeCS.E15RadSStringovima.Program();
+//new UcenjeCS.E15RadSStringovima.Program();
 
 
 //new UcenjeCS.E14Nasljedivanje.Program();
@@ -21,7 +21,7 @@ new UcenjeCS.E15RadSStringovima.Program();
 
 //Vježba123.Izvedi();
 
-//LjubavniKalkulator.Izvedi();
+LjubavniKalkulator.Izvedi();
 //iklicnaTablica.Izvedi();
 //TablicaMnozenja.Izvedi();
 //E12Rekurzija.Izvedi();
