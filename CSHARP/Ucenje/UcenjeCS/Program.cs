@@ -9,11 +9,11 @@ using UcenjeCS.Zadaci;
 
 
 
-
+UcenjeCS.E13KlasaObjekt.Program.Izvedi();
 
 //Vježba123.Izvedi();
 
-LjubavniKalkulator.Izvedi();
+//LjubavniKalkulator.Izvedi();
 //iklicnaTablica.Izvedi();
 //TablicaMnozenja.Izvedi();
 //E12Rekurzija.Izvedi();
@@ -36,3 +36,8 @@ Console.WriteLine(7);
 Console.WriteLine(true);
 Console.WriteLine("Lea Raguž");
 */
+
+
+// publik - svi
+//privet - unutar klase
+//internal - unutar namespace-a
