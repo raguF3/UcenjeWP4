@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace UcenjeCS.Zadaci
 {
     internal class CiklicnaTablica
     {
+        
         public static void Izvedi()
         {
 
@@ -27,17 +30,17 @@ namespace UcenjeCS.Zadaci
             {
 
                 for (int i = right; i >= left; i--)
-                    tablica[bottom, i] = broj++; 
+                    tablica[bottom, i] = broj++;
                 bottom--;
 
 
                 for (int i = bottom; i >= top; i--)
-                    tablica[i, left] = broj++; 
+                    tablica[i, left] = broj++;
                 left++;
 
 
                 for (int i = left; i <= right; i++)
-                    tablica[top, i] = broj++; 
+                    tablica[top, i] = broj++;
                 top++;
 
 
@@ -56,6 +59,7 @@ namespace UcenjeCS.Zadaci
                 Console.WriteLine();
 
             }
+
 
         }
     }
