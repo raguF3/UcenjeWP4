@@ -14,17 +14,17 @@ namespace UcenjeCS.Zadaci
         public static void Izvedi()
         {
 
-            Console.Write("Unesite broj redaka: ");
-            int redaka = int.Parse(Console.ReadLine());
-            Console.Write("Unesite broj stupaca: ");
-            int stupaca = int.Parse(Console.ReadLine());
+            Console.Write("Unesi prvi cijeli broj: ");
+            int redak = int.Parse(Console.ReadLine());
+            Console.Write("Unesi drugi cijelim broj: ");
+            int stupac = int.Parse(Console.ReadLine());
 
 
-            int[,] tablica = new int[redaka, stupaca];
+            int[,] tablica = new int[redak, stupac];
 
             int broj = 1;
 
-            int top = 0, bottom = redaka - 1, left = 0, right = stupaca - 1;
+            int top = 0, bottom = redak - 1, left = 0, right = stupac - 1;
 
             while (top <= bottom && left <= right)
             {
@@ -50,9 +50,9 @@ namespace UcenjeCS.Zadaci
             }
 
 
-            for (int i = 0; i < redaka; i++)
+            for (int i = 0; i < redak; i++)
             {
-                for (int j = 0; j < stupaca; j++)
+                for (int j = 0; j < stupac; j++)
                 {
                     Console.Write(tablica[i, j] + "\t");
                 }
