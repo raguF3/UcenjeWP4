@@ -43,6 +43,88 @@ namespace UcenjeCS.E16GenericiLambdaEkstenzije
 
             smjerovi.ForEach(Console.WriteLine);
 
+            Obrada<Smjer> os = new Obrada<Smjer>();
+            os.ObjektObrade = smjerovi[0];
+            os.Obradi();
+
+            Obrada<Polaznik> op = new Obrada<Polaznik>();
+            op.ObjektObrade = new() { Sifra = 1, Ime = "Marko", Prezime = "Perić" };
+            op.Obradi();
+
+
+            op = new Obrada<Polaznik>();
+            op.Obradi();
+
+
+
+            // Lambda expressions
+
+            // klasika
+            Console.WriteLine(KlasicnaMetoda(2, 2));
+
+            var Zbroj = (int a, int b) => a + b;
+
+            Console.WriteLine(Zbroj(2, 2));
+
+            var algoritam = (int x, int y) =>
+            {
+                var t = ++x - y;
+                return t + y;
+            };
+
+            Console.WriteLine(algoritam(2, 2));
+            Console.WriteLine(algoritam(1, 1));
+
+            // ekstenzije
+            //smjerovi[0].OdradiPosao();
+            Smjer s = new Smjer();
+            s.naziv = "WP";
+
+            smjerovi.Add(new() { sifra = 2, naziv = "Java programiranje" });
+
+            smjerovi.ForEach(Console.WriteLine);
+            smjerovi.Sort();
+            Console.WriteLine("***************");
+            smjerovi.ForEach(Console.WriteLine);
+
+
+            os.Lista = smjerovi;
+
+            os.IspisStavaka(mojIspis);
+
+            os.IspisStavaka(drugaMetoda);
+            Console.WriteLine();
+
+            os.IspisStavaka(s => {
+                Console.WriteLine("Nisam višpe znao kako nazvati metodu: " + s);
+            });
+
+            smjerovi.ForEach(s => {
+                Console.WriteLine("Vrtim stavke liste");
+            });
+
+            smjerovi.ForEach(mojIspis);
+
+
+            Console.WriteLine(smjerovi.Sum(s => s.sifra));
+
+        }
+
+        private void mojIspis(Smjer s)
+        {
+            Console.WriteLine("Prilagođeni ispis " + s.naziv);
+        }
+
+        private void drugaMetoda(Smjer smjer)
+        {
+            Console.Write(smjer.sifra);
+        }
+
+
+        private int KlasicnaMetoda(int a, int b)
+        {
+            return a + b;
+
 
         }
 
