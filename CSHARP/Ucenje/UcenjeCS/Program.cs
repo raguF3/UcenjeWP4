@@ -14,23 +14,12 @@ using UcenjeCS.Zadaci;
 
 
 
-new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+new UcenjeCS.E18KonzulnaAplikacija.Izbornik();
+//new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
 
 //new UcenjeCS.E15RadSStringovima.Program();
