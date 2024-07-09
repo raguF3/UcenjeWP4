@@ -96,7 +96,7 @@ namespace UcenjeCS.E16GenericiLambdaEkstenzije
             Console.WriteLine();
 
             os.IspisStavaka(s => {
-                Console.WriteLine("Nisam višpe znao kako nazvati metodu: " + s);
+                Console.WriteLine("Nisam više znao kako nazvati metodu: " + s);
             });
 
             smjerovi.ForEach(s => {
