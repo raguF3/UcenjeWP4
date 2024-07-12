@@ -18,7 +18,7 @@ using UcenjeCS.Zadaci;
 
 
 
-//new UcenjeCS.E18KonzulnaAplikacija.Izbornik();
+new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 //new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
 
@@ -32,7 +32,7 @@ using UcenjeCS.Zadaci;
 //Vježba123.Izvedi();
 
 //LjubavniKalkulator.Izvedi();
-CiklicnaTablica.Izvedi();
+///CiklicnaTablica.Izvedi();
 //TablicaMnozenja.Izvedi();
 //E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();

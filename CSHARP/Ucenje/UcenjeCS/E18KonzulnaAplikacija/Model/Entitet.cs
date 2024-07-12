@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UcenjeCS.E18KonzulnaAplikacija.Model
+﻿namespace UcenjeCS.E18KonzolnaAplikacija.Model
 {
-    internal class Entitet
+    internal abstract class Entitet
     {
-        public int? sifra { get; set; }
-       
+        public int? Sifra { get; set; }
+
     }
 }

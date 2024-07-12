@@ -9,6 +9,7 @@ namespace UcenjeCS.E13KlasaObjekt.Edunova
     internal class Smjer
     {
         private int broj;
+        internal DateTime IzvodiSeOd;
 
         public int? sifra { get; set; }
         public string? naziv {get; set; }

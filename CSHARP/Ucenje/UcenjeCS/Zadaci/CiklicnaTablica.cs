@@ -20,64 +20,74 @@ namespace UcenjeCS.Zadaci
             int stupac = int.Parse(Console.ReadLine());
 
 
-            int[,] tablica = new int[red, stupac];
+            int[,] tab = new int[red, stupac];
             int broj = red * stupac;
-            int r = 0;
-            int s = 0;
+            int r = red - 1;
+            int s = stupac - 1;
             string smjer = "lijevo";
 
             for (int i = 1; i <= broj; i++)
             {
-                tablica[r, s] = i;
+                if (smjer == "desno" && (s > stupac - 1 || tab[r, s] != 0))
+                {
+                    smjer = "dolje";
+                    s--;
+                    r++;
+                }
+                if (smjer == "dolje" && (r > red - 1 || tab[r, s] != 0))
+                {
+                    smjer = "lijevo";
+                    r--;
+                    s--;
+                }
+                if (smjer == "lijevo" && (s < 0 || tab[r, s] != 0))
+                {
+                    smjer = "gore";
+                    s++;
+                    r--;
+                }
+                if (smjer == "gore" && (r < 0 || tab[r, s] != 0))
+                {
+                    smjer = "desno";
+                    r++;
+                    s++;
 
+                }
+                tab[r, s] = i;
                 switch (smjer)
                 {
                     case "desno":
-                        s++;
-                        if (s >= stupac || tablica[r, s] != 0)
                         {
-                            s--;
-                            r++;
-                            smjer = "dolje";
+                            s++;
+                            break;
                         }
-                        break;
-                    case "dolje":
-                        r++;
-                        if (r >= red || tablica[r, s] != 0)
-                        {
-                            r--;
-                            s--;
-                            smjer = "lijevo";
-                        }
-                        break;
                     case "lijevo":
-                        s--;
-                        if (s < 0 || tablica[r, s] != 0)
                         {
-                            s++;
-                            r--;
-                            smjer = "gore";
+                            s--;
+                            break;
                         }
-                        break;
                     case "gore":
-                        r--;
-                        if (r < 0 || tablica[r, s] != 0)
+                        {
+                            r--;
+                            break;
+                        }
+                    case "dolje":
                         {
                             r++;
-                            s++;
-                            smjer = "desno";
+                            break;
                         }
-                        break;
-                }
-            }
 
+                }
+
+            }
             for (int j = 0; j < red; j++)
             {
                 for (int k = 0; k < stupac; k++)
                 {
-                    Console.Write("{0,4}", tablica[j, k]);
+                    Console.Write("{0,4}", tab[j, k]);
                 }
                 Console.WriteLine();
+
             }
             
             

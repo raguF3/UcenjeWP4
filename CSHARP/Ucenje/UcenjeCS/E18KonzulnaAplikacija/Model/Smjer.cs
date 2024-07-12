@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UcenjeCS.E18KonzulnaAplikacija.Model
+﻿namespace UcenjeCS.E18KonzolnaAplikacija.Model
 {
-    internal class Smjer : Entitet
+    internal class Smjer:Entitet
     {
 
         public string? Naziv { get; set; }
         public int? Trajanje { get; set; }
         public float? Cijena { get; set; }
-    
         public DateTime? IzvodiSeOd { get; set; }
         public bool? Verificiran { get; set; }
 
         public override string ToString()
         {
-            return "Sifra=" + sifra + " ,Naziv=" + Naziv + ", Trajanje=" + Trajanje + ", Cijena=" + Cijena +
-                ", IzvodiSeOd=" + IzvodiSeOd + ", Verificiran=" + Verificiran;
+            return "Sifra=" + Sifra + " ,Naziv=" + Naziv + ", Trajanje=" + Trajanje + ", Cijena=" + Cijena +
+                ", IzvodiSeOd=" + IzvodiSeOd + ", Verificiran=" + Verificiran; 
         }
+
     }
 }
