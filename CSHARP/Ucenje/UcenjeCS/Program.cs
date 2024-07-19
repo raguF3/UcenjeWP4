@@ -16,9 +16,9 @@ using UcenjeCS.Zadaci;
 
 
 
-
-
-new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
+new UcenjeCS.E17Subota.Program();
+  
+//new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 //new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
 
