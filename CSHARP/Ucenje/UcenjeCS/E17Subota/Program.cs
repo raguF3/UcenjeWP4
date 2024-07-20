@@ -37,21 +37,43 @@ namespace UcenjeCS.E17Subota
                   brojevi[i] = u;
                 */
                 brojevi[i] = s.Count(znak=> znak == s[i]);
+                brojevi = srediniz(brojevi);
 
             }
             Console.WriteLine(string.Join(",", brojevi));
+           // Console.WriteLine("{0} i {1} se vole {2} %", ime1, ime2, ljubav(brojevi));
 
-           
+
         }
 
         private int ljubav(int[] brojevi)
         {
-            var broj =  int.Parse(string.Join("", brojevi));
-            if (broj<=100)
+            if (brojevi.Length < 4)
             {
-                return broj;
+                var broj = int.Parse(string.Join("", brojevi));
+                if (broj <= 100)
+                {
+                    return broj;
+
+                }
             }
-            return ljubav(brojevi);
+            int[] novi = new int[brojevi.Length%2==0? brojevi.Length/2 : brojevi.Length/2+1];
+            for (int i = 0; i < brojevi.Length; i++)
+            {
+                novi[i] = brojevi[i] + brojevi[brojevi.Length - 1-i];
+            }
+            Console.WriteLine(string.Join(",", novi));
+            return ljubav(novi);
+        }
+        private int[] srediniz(int[] brojevi)
+        {
+            var niz = string.Join("", brojevi);
+            brojevi = new int[niz.Length];
+            for (int i = 0; i < niz.Length; i++)
+            {
+                brojevi[i] = int.Parse(niz[i].ToString());
+            }
+            return brojevi;
         }
     }
 }
