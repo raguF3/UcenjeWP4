@@ -72,7 +72,7 @@ namespace UcenjeCS.Zadaci
 
         static void IspisiBrojeve(List<int> brojevi)
         {
-            Console.WriteLine(string.Join(" ", brojevi));
+            Console.WriteLine(string.Join(",", brojevi));
         }
     }
 }
