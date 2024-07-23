@@ -62,6 +62,9 @@ namespace UcenjeCS.E17Subota
             {
                 novi[i] = brojevi[i] + brojevi[brojevi.Length - 1 - i];
             }
+
+            brojevi = srediNiz(novi);
+
             Console.WriteLine(string.Join(",", novi));
             //algoritam zbrajanja
             return ljubav(brojevi);
