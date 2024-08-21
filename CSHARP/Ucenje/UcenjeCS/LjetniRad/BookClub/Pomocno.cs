@@ -12,15 +12,13 @@ namespace UcenjeCS.LjetniRad.BookClub
         {
 
             int b;
-
-            while(true) 
+            while (true)
             {
-                try 
-                
+                try
                 {
-                    Console.WriteLine(poruka);
-                    b=int.Parse(Console.ReadLine());
-                    if(b < min || b> max )
+                    Console.Write(poruka + ": ");
+                    b = int.Parse(Console.ReadLine());
+                    if (b < min || b > max)
                     {
                         throw new Exception();
                     }
@@ -28,10 +26,10 @@ namespace UcenjeCS.LjetniRad.BookClub
                 }
                 catch
                 {
-                    Console.WriteLine("Unos nije dobar, unos mora biti u rasponu {1} do {5}", min, max);
+                    Console.WriteLine("Unos nije dobar, unos mora biti u rasponu {0} do {1}", min, max);
                 }
-            }
 
+            }
         }
     }
 }
