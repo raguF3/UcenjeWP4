@@ -8,5 +8,11 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Izbornik
     {
+        public Izbornik()
+        {
+
+            Console.WriteLine("Hello world");
+
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 
 using UcenjeCS;
-using UcenjeCS.Zadaci;
+using UcenjeCS.LjetniRad;
 
 
 
@@ -12,12 +12,13 @@ using UcenjeCS.Zadaci;
 
 
 
-
+new UcenjeCS.LjetniRad.BookClub.Izbornik();
+//new UcenjeCS.LjetniRad.Izbornik();
 
 
 
 //new UcenjeCS.E17Subota.Program();
-  
+
 //new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 //new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
@@ -32,7 +33,7 @@ using UcenjeCS.Zadaci;
 //Vježba123.Izvedi();
 
 //LjubavniKalkulator.Izvedi();
-CiklicnaTablica.Izvedi();
+//CiklicnaTablica.Izvedi();
 //TablicaMnozenja.Izvedi();
 //E12Rekurzija.Izvedi();
 //E11Z1.Izvedi();

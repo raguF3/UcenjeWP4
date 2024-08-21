@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
 {
-    internal class Knjige
+    internal class Knjige: Entitet
     {
         public int? sifra {  get; set; }
         public string? naziv {  get; set; }

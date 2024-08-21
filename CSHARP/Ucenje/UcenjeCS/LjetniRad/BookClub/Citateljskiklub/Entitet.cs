@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
 {
-    internal class Dolasci: Entitet
+    internal abstract class Entitet
     {
-        public int? sastanak {  get; set; }
-        public int? clan {  get; set; }
-      
+        public int? Sifra {  get; set; }
+
     }
 }
