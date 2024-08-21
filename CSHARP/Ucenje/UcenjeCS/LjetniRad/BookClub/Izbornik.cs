@@ -33,7 +33,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
                 case 1:
-                    
+                    Console.WriteLine("Pozivv izbornika smjera");
                     break;
             }
         }
