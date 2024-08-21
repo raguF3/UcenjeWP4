@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UcenjeCS.E13KlasaObjekt.Citateljskiklub
+namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
 {
     internal class Knjige
     {
