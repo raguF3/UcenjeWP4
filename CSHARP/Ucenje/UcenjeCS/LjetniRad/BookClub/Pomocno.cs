@@ -22,12 +22,13 @@ namespace UcenjeCS.LjetniRad.BookClub
                     {
                         Console.WriteLine("Uneseni datum ne smije biti prije današnjeg datuma");
                     }
-                    Console.WriteLine(poruka);
+                    Console.WriteLine(poruka + ": ");
                     d = DateTime.Parse(Console.ReadLine());
                     if (kontrolaprijeDanasnjegDatuma && d < DateTime.Now)
                     {
                         throw new Exception(); 
                     }
+                    return d;
                 }
                 catch 
                 {
