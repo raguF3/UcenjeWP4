@@ -34,11 +34,12 @@ namespace UcenjeCS.LjetniRad.BookClub
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
                 case 1:
+                    Console.Clear();
                     ObradaKnjiga.PrikaziIzbornik();
                     PrikaziIzornik();
                     break;
 
-                case5:
+                case 5:
                     Console.WriteLine("Hvala na korištenju aplikacije, doviđenja");
                     break;
             }
