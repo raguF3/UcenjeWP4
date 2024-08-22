@@ -9,12 +9,13 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Izbornik
     {
+        public ObradaKnjiga ObradaKnjiga { get; set; } = new ObradaKnjiga();
+
+
         public Izbornik()
         {
-
             PozdravnaPoruka();
             PrikaziIzornik();
-
         }
 
         private void PrikaziIzornik()
@@ -33,7 +34,12 @@ namespace UcenjeCS.LjetniRad.BookClub
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
                 case 1:
-                    Console.WriteLine("Poziv izbornika smjera");
+                    ObradaKnjiga.PrikaziIzbornik();
+                    PrikaziIzornik();
+                    break;
+
+                case5:
+                    Console.WriteLine("Hvala na korištenju aplikacije, doviđenja");
                     break;
             }
         }
