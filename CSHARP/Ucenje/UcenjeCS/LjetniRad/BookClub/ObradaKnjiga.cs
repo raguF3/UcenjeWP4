@@ -36,12 +36,51 @@ namespace UcenjeCS.LjetniRad.BookClub
         {
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
             {
-               
+
+                case 1:
+                    PrikažiKnjige();
+                    PrikaziIzbornik();
+                    break;
+
+                case 2:
+                    UnosNoveKnjige();
+                    PrikaziIzbornik();
+                    break;
+
+
                 case 5:
                     Console.Clear();
                     break;
             }
         }
-}
+
+        private void PrikažiKnjige()
+        {
+            Console.WriteLine("************************");
+            Console.WriteLine("Popis knjiga u bazi podataka");
+
+            foreach (var k in Knjige)   
+            {
+                Console.WriteLine(k);
+            }
+            Console.WriteLine("*************************");
+        }
+
+        private void UnosNoveKnjige()
+        {
+
+            Console.WriteLine("*************************");
+            Console.WriteLine("Unesite podatke o knjizi i autoru");
+
+            Knjige.Add(new()
+            {
+                sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue),
+                naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true),
+                autor = Pomocno.Ucitajstring("Unesi ime autora", 80, true),
+        
+
+            });
+        }
+    }
 }   
 

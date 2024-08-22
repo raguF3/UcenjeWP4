@@ -8,6 +8,8 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Pomocno
     {
+       
+
         internal static int UcitajRasponBroja(string poruka, int min, int max)
         {
 
@@ -29,6 +31,22 @@ namespace UcenjeCS.LjetniRad.BookClub
                     Console.WriteLine("Unos nije dobar, unos mora biti u rasponu {0} do {1}", min, max);
                 }
 
+            }
+        }
+
+        internal static string Ucitajstring(string poruka, int max, bool obavezno)
+        {
+            string s;
+            while (true)
+            {
+                Console.WriteLine(poruka);
+                s=Console.ReadLine().Trim();
+                if(obavezno &&   s.Length ==0  || s.Length > max)
+                {
+                    Console.WriteLine("Maksimalno dozvoljeno {0} znakova", max);
+                    continue;
+                }
+                return s;
             }
         }
     }
