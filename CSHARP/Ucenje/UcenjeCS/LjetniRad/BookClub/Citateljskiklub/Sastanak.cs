@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
 {
-    internal class Sastanci: Entitet
+    internal class Sastanak: Entitet
     {
         public int? sifra {  get; set; }
         public DateTime? datum { get; set; }

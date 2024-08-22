@@ -7,7 +7,7 @@ using UcenjeCS.LjetniRad.BookClub.Citateljskiklub;
 
 namespace UcenjeCS.LjetniRad.BookClub.LjetniRad.BookClub.Citateljskiklub
 {
-    internal class Clanovi: Entitet
+    internal class Clan: Entitet
     {
         public int? sifra {  get; set; }
         public string? ime {  get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
 {
-    internal class Dolasci: Entitet
+    internal class Dolazak: Entitet
     {
         public int? sastanak {  get; set; }
         public int? clan {  get; set; }
