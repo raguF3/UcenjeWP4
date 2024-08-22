@@ -77,7 +77,8 @@ namespace UcenjeCS.LjetniRad.BookClub
                 sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue),
                 naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true),
                 autor = Pomocno.Ucitajstring("Unesi ime autora", 80, true),
-        
+                godina=Pomocno.Ucitajdatum("Unesi datum izdavanja", true)
+
 
             });
         }

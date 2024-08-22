@@ -8,7 +8,33 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Pomocno
     {
-       
+        internal static DateTime? Ucitajdatum(string poruka, bool kontrolaprijeDanasnjegDatuma)
+        {
+            DateTime d;
+            
+            while(true)
+            {
+                try
+                {
+                    Console.WriteLine("Format unosa je yyyy-MM-dd, aza današnji datum {0}",
+                        DateTime.Now.ToString("yyyy-MM-dd"));
+                    if (kontrolaprijeDanasnjegDatuma)
+                    {
+                        Console.WriteLine("Uneseni datum ne smije biti prije današnjeg datuma");
+                    }
+                    Console.WriteLine(poruka);
+                    d = DateTime.Parse(Console.ReadLine());
+                    if (kontrolaprijeDanasnjegDatuma && d < DateTime.Now)
+                    {
+                        throw new Exception(); 
+                    }
+                }
+                catch 
+                {
+                    Console.WriteLine("Unos datuma nije dobar");
+                }
+            }
+        }
 
         internal static int UcitajRasponBroja(string poruka, int min, int max)
         {
