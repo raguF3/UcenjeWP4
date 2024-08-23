@@ -8,7 +8,7 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Pomocno
     {
-        internal static DateTime? Ucitajdatum(string poruka, bool kontrolaprijeDanasnjegDatuma)
+        internal static DateTime? Ucitajdatum(string poruka, bool kontrolanakonDanasnjegDatuma)
         {
             DateTime d;
             
@@ -16,15 +16,15 @@ namespace UcenjeCS.LjetniRad.BookClub
             {
                 try
                 {
-                    Console.WriteLine("Format unosa je yyyy-MM-dd, aza današnji datum {0}",
-                        DateTime.Now.ToString("yyyy-MM-dd"));
-                    if (kontrolaprijeDanasnjegDatuma)
+                    Console.WriteLine("Format unosa je yyyy-MM-dd, za današnji datum {0}",
+                         DateTime.Now.ToString("yyyy-MM-dd"));
+                    if (kontrolanakonDanasnjegDatuma)
                     {
-                        Console.WriteLine("Uneseni datum ne smije biti prije današnjeg datuma");
+                        Console.WriteLine("Uneseni datum ne smije biti nakon današnjeg datuma!");
                     }
-                    Console.WriteLine(poruka + ": ");
+                    Console.Write(poruka + ": ");
                     d = DateTime.Parse(Console.ReadLine());
-                    if (kontrolaprijeDanasnjegDatuma && d < DateTime.Now)
+                    if (kontrolanakonDanasnjegDatuma && d > DateTime.Now)
                     {
                         throw new Exception(); 
                     }
