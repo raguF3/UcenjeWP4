@@ -8,6 +8,12 @@ namespace UcenjeCS.LjetniRad.BookClub
 {
     internal class Pomocno
     {
+        internal static bool UcitajBool(string poruka, string trueValue)
+        {
+            Console.Write(poruka + ": ");
+            return Console.ReadLine().Trim().ToLower() == trueValue;
+        }
+
         internal static DateTime? Ucitajdatum(string poruka, bool kontrolanakonDanasnjegDatuma)
         {
             DateTime d;

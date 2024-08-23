@@ -27,7 +27,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             Console.WriteLine("1. Pregled svih knjiga");
             Console.WriteLine("2. Unos novih knjiga");
             Console.WriteLine("3. Promjena postojećih knjiga");
-            Console.WriteLine("4. Brisanje knjiga");
+            Console.WriteLine("4. Brisanje postojećih knjiga");
             Console.WriteLine("5. Povratak na glavni izbornik");
             OdabirOpcijaIzbornika();
         }
@@ -38,12 +38,23 @@ namespace UcenjeCS.LjetniRad.BookClub
             {
 
                 case 1:
-                    PrikažiKnjige();
+                    PrikaziKnjige();
                     PrikaziIzbornik();
                     break;
 
                 case 2:
                     UnosNoveKnjige();
+                    PrikaziIzbornik();
+                    break;
+
+                case 3:
+                    PromjenaPostojecihKnjiga();
+                    PrikaziIzbornik();
+                    break;
+
+
+                case 4:
+                    BrisanjePostojecihKnjiga();
                     PrikaziIzbornik();
                     break;
 
@@ -54,7 +65,35 @@ namespace UcenjeCS.LjetniRad.BookClub
             }
         }
 
-        private void PrikažiKnjige()
+        private void BrisanjePostojecihKnjiga()
+        {
+            PrikaziKnjige();
+            var odabrani = Knjige[Pomocno.UcitajRasponBroja("Odaberi redni broj knjiga za brisanje",
+                1, Knjige.Count) - 1];
+
+            if (Pomocno.UcitajBool("Sigurno obrisati " + odabrani.naziv + "? (DA/NE)", "da"))
+            {
+                Knjige.Remove(odabrani);
+            }
+
+        }
+
+        private void PromjenaPostojecihKnjiga()
+        {
+            PrikaziKnjige();
+            var odabrani = Knjige[Pomocno.UcitajRasponBroja("Odaberi redni broj knjige za promjenu",
+                1, Knjige.Count) - 1];
+            odabrani.sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue);
+            odabrani.naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true);
+            odabrani.autor = Pomocno.Ucitajstring("Unesi naziv autora", 80, true);
+            odabrani.godina = Pomocno.Ucitajdatum("Unesi godinu izdavanja", true);
+            
+
+        }
+
+       
+
+        private void PrikaziKnjige()
         {
             Console.WriteLine("************************");
             Console.WriteLine("Popis knjiga u bazi podataka");
