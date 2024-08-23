@@ -23,7 +23,7 @@ namespace UcenjeCS.LjetniRad.BookClub
         public void PrikaziIzbornik()
 
         {
-            Console.WriteLine(" Izbornik knjiga");
+            Console.WriteLine("    Izbornik knjiga   ");
             Console.WriteLine("1. Pregled svih knjiga");
             Console.WriteLine("2. Unos novih knjiga");
             Console.WriteLine("3. Promjena postojećih knjiga");
