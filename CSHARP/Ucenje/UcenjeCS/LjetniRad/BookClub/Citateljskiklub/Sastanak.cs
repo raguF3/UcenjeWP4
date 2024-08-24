@@ -14,5 +14,11 @@ namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
         public string? mjesto { get; set; }
 
 
+        public override string ToString()
+        {
+            return "sifra=" + sifra + " ,datum=" + datum + ", knjiga=" + knjiga + ", mjesto=" + mjesto;
+
+        }
+
     }
 }

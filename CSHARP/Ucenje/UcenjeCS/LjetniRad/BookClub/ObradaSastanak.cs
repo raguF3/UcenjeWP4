@@ -82,7 +82,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             PrikaziSastanke();
             var odabrani = Sastanci[Pomocno.UcitajRasponBroja("Odaberi redni broj sastanka za promjenu",
                 1, Sastanci.Count) - 1];
-            odabrani.sifra = Pomocno.UcitajRasponBroja("Unesi šifru sastanka", 1, int.MaxValue);
+            odabrani.sifra = Pomocno.UcitajRasponBroja("Unesi redni broj sastanka", 1, int.MaxValue);
             odabrani.datum = Pomocno.Ucitajdatum("Unesi datum sastanka", true);
             odabrani.knjiga = Pomocno.UcitajRasponBroja("Unesi sifru knjige", 1, int.MaxValue);
             odabrani.mjesto = Pomocno.Ucitajstring("Unesi naziv mjesta sastanka", 50, true);
@@ -112,7 +112,7 @@ namespace UcenjeCS.LjetniRad.BookClub
 
             Sastanci.Add(new()
             {
-                sifra = Pomocno.UcitajRasponBroja("Unesi šifru sastanka", 1, int.MaxValue),
+                sifra = Pomocno.UcitajRasponBroja("Unesi redni broj sastanka", 1, int.MaxValue),
                 datum = Pomocno.Ucitajdatum("Unesi datum sastanka", true),
                 knjiga = Pomocno.UcitajRasponBroja("Unesi sifru knjige", 1, int.MaxValue),
                 mjesto = Pomocno.Ucitajstring("Unesi naziv mjesta sastanka", 50, true)

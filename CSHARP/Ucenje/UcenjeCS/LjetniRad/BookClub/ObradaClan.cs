@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UcenjeCS.LjetniRad.BookClub.Citateljskiklub;
+
 using UcenjeCS.LjetniRad.BookClub.LjetniRad.BookClub.Citateljskiklub;
 
 namespace UcenjeCS.LjetniRad.BookClub
@@ -113,8 +113,8 @@ namespace UcenjeCS.LjetniRad.BookClub
                 ime = Pomocno.Ucitajstring("Unesi ime", 80, true),
                 prezime = Pomocno.Ucitajstring("Unesi prezime", 80, true),
                 Email = Pomocno.Ucitajstring("Unesi Email adresu", 80, true),
-                lozinka=Pomocno.UcitajRasponBroja("Unesi lozinku",1,6),
-                
+                lozinka = Pomocno.UcitajRasponBroja("Unesi lozinku", 1,50)
+
             });
         }
     }

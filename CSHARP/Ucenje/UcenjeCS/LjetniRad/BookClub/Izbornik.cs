@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UcenjeCS.E18KonzolnaAplikacija;
+using UcenjeCS.LjetniRad.BookClub.Citateljskiklub;
 
 namespace UcenjeCS.LjetniRad.BookClub
 {
