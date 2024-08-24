@@ -20,15 +20,15 @@ namespace UcenjeCS.LjetniRad.BookClub
 
         public void PrikaziIzbornik()
         {
-            Console.WriteLine("   Članovi   ");
-            Console.WriteLine("1. Pregled članova");
+            Console.WriteLine("    Članovi   ");
+            Console.WriteLine("1. Prikaži članova");
             Console.WriteLine("2. Unos novih članova");
             Console.WriteLine("3. Promjena postojećih članova");
             Console.WriteLine("4. Brisanje postojećih članova");
             Console.WriteLine("5. Povratak na glavni izbornik");
             OdabirOpcijaIzbornika();
         }
-
+        
         private void OdabirOpcijaIzbornika()
         {
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
@@ -79,11 +79,11 @@ namespace UcenjeCS.LjetniRad.BookClub
             PrikaziClanove();
             var odabrani = Clanovi[Pomocno.UcitajRasponBroja("Odaberi redni broj člana za promjenu",
                 1, Clanovi.Count) - 1];
-            odabrani.sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue);
-            odabrani.ime = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true);
-            odabrani.prezime = Pomocno.Ucitajstring("Unesi naziv autora", 80, true);
+            odabrani.sifra = Pomocno.UcitajRasponBroja("Unesi šifru člana", 1, int.MaxValue);
+            odabrani.ime = Pomocno.Ucitajstring("Unesi ime", 80, true);
+            odabrani.prezime = Pomocno.Ucitajstring("Unesi prezime", 80, true);
             odabrani.Email = Pomocno.Ucitajstring("Unesi Email adresu", 80, true);
-
+            odabrani.lozinka = Pomocno.UcitajRasponBroja("Unesi lozinku", 1, 6);
 
         }
 
@@ -109,12 +109,12 @@ namespace UcenjeCS.LjetniRad.BookClub
 
             Clanovi.Add(new()
             {
-                sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue),
-                ime = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true),
-                prezime = Pomocno.Ucitajstring("Unesi ime autora", 80, true),
+                sifra = Pomocno.UcitajRasponBroja("Unesi šifru člana", 1, int.MaxValue),
+                ime = Pomocno.Ucitajstring("Unesi ime", 80, true),
+                prezime = Pomocno.Ucitajstring("Unesi prezime", 80, true),
                 Email = Pomocno.Ucitajstring("Unesi Email adresu", 80, true),
-
-
+                lozinka=Pomocno.UcitajRasponBroja("Unesi lozinku",1,6),
+                
             });
         }
     }

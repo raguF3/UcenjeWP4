@@ -10,15 +10,18 @@ namespace UcenjeCS.LjetniRad.BookClub
     internal class Izbornik
     {
         public ObradaKnjiga ObradaKnjiga { get; set; } = new ObradaKnjiga();
+        public ObradaDolazak ObradaDolazak { get; set; } = new ObradaDolazak();
+        public ObradaClan ObradaClan { get; set; } = new ObradaClan();
+
 
 
         public Izbornik()
         {
             PozdravnaPoruka();
-            PrikaziIzornik();
+            PrikaziIzbornik();
         }
 
-        private void PrikaziIzornik()
+        private void PrikaziIzbornik()
         {
             Console.WriteLine("     GLAVNI IZBORNIK    ");
             Console.WriteLine("1. Knjige");
@@ -36,8 +39,23 @@ namespace UcenjeCS.LjetniRad.BookClub
                 case 1:
                     Console.Clear();
                     ObradaKnjiga.PrikaziIzbornik();
-                    PrikaziIzornik();
+                    PrikaziIzbornik();
                     break;
+
+                
+
+                case 3:
+                    Console.Clear();
+                    ObradaDolazak.PrikaziIzbornik();
+                    PrikaziIzbornik();
+                    break;
+
+                case 4:
+                    Console.Clear();
+                    ObradaClan.PrikaziIzbornik();
+                    PrikaziIzbornik();
+                    break;
+                        
 
                 case 5:
                     Console.WriteLine("Hvala na korištenju aplikacije, doviđenja");
@@ -45,12 +63,13 @@ namespace UcenjeCS.LjetniRad.BookClub
             }
         }
 
+       
 
         private void PozdravnaPoruka()
 
         {
             Console.WriteLine("*****************************");
-            Console.WriteLine("********   Welcome   ********");
+            Console.WriteLine("           Welcome           ");
             Console.WriteLine("*****************************");
         }
 

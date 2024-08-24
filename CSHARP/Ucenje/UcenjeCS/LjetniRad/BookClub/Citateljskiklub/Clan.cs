@@ -14,7 +14,6 @@ namespace UcenjeCS.LjetniRad.BookClub.LjetniRad.BookClub.Citateljskiklub
         public string? prezime { get; set; }
         public string? Email {  get; set; }
         public int? lozinka { get; set; }
-        public bool? administrator { get; set; }
-
+       
     }
 }
