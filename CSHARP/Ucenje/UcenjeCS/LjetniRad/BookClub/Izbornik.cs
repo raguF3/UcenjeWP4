@@ -13,6 +13,7 @@ namespace UcenjeCS.LjetniRad.BookClub
         public ObradaDolazak ObradaDolazak { get; set; } = new ObradaDolazak();
         public ObradaClan ObradaClan { get; set; } = new ObradaClan();
 
+        public ObradaSastanak ObradaSastanak { get; set; } = new ObradaSastanak();
 
 
         public Izbornik()
@@ -42,7 +43,12 @@ namespace UcenjeCS.LjetniRad.BookClub
                     PrikaziIzbornik();
                     break;
 
-                
+                case 2:
+                    Console.Clear();
+                    ObradaSastanak.PrikaziIzbornik();
+                    PrikaziIzbornik();
+                    break;
+
 
                 case 3:
                     Console.Clear();
@@ -55,7 +61,7 @@ namespace UcenjeCS.LjetniRad.BookClub
                     ObradaClan.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
-                        
+
 
                 case 5:
                     Console.WriteLine("Hvala na korištenju aplikacije, doviđenja");
@@ -63,7 +69,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             }
         }
 
-       
+
 
         private void PozdravnaPoruka()
 
