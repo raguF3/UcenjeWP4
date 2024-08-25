@@ -145,14 +145,14 @@ namespace UcenjeCS.LjetniRad.BookClub
 
         }
 
-       
+
 
         private void PrikaziKnjige()
         {
             Console.WriteLine("************************");
             Console.WriteLine("Popis knjiga u bazi podataka");
 
-            foreach (var k in Knjige)   
+            foreach (var k in Knjige)
             {
                 Console.WriteLine(k);
             }
@@ -170,11 +170,14 @@ namespace UcenjeCS.LjetniRad.BookClub
                 sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue),
                 naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true),
                 autor = Pomocno.Ucitajstring("Unesi ime autora", 80, true),
-                godina=Pomocno.Ucitajdatum("Unesi datum izdavanja", true),
+                godina = Pomocno.Ucitajdatum("Unesi datum izdavanja", true),
                 ocjena = Pomocno.UcitajRasponBroja("Unesi ocjenu knjige", 1, 5)
 
             });
+
+            Console.WriteLine("Knjiga je uspješno dodana!");
         }
     }
-}   
+}
+
 
