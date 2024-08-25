@@ -15,12 +15,12 @@ namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
         public DateTime? godina { get; set; }
 
         public int? ocjena { get; set; }
-
+        public int brojGlasova { get; set; }
 
 
         public override string ToString()
         {
-            return "sifra=" + sifra + " ,naziv=" + naziv + ", autor=" + autor + ", godina=" + godina + ", ocjena= " + ocjena;
+            return "sifra=" + sifra + " ,naziv=" + naziv + ", autor=" + autor + ", godina=" + godina + ", ocjena= " + ocjena + ", brojGlasaova=" + brojGlasova;
 
         }
     }

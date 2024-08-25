@@ -29,13 +29,15 @@ namespace UcenjeCS.LjetniRad.BookClub
             Console.WriteLine("3. Promjena postojećih knjiga");
             Console.WriteLine("4. Brisanje postojećih knjiga");
             Console.WriteLine("5. Pretraživanje knjiga");
-            Console.WriteLine("6. Povratak na glavni izbornik");
+            Console.WriteLine("6. Glasaj za najbolju knjigu");
+            Console.WriteLine("7. Prikaži najbolje knjige");
+            Console.WriteLine("8. Povratak na glavni izbornik");
             OdabirOpcijaIzbornika();
         }
 
         private void OdabirOpcijaIzbornika()
         {
-            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 6))
+            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 8))
             {
 
                 case 1:
@@ -65,10 +67,51 @@ namespace UcenjeCS.LjetniRad.BookClub
                     break;
 
                 case 6:
+                    GlasajZaKnjigu();
+                    PrikaziIzbornik();
+                    break;
+
+                case 7:
+                    PrikaziNajboljeKnjige();
+                    PrikaziIzbornik();
+                    break;
+
+                case 8:
                     Console.Clear();
                     break;
             }
         }
+
+
+        private void GlasajZaKnjigu()
+        {
+            PrikaziKnjige();
+            var odabrani = Knjige[Pomocno.UcitajRasponBroja("Odaberi redni broj knjige za glasovanje", 1, Knjige.Count) - 1];
+            odabrani.brojGlasova++;
+            Console.WriteLine($"Glas za knjigu '{odabrani.naziv}' je uspješno dodan! Sada ima {odabrani.brojGlasova} glasova.");
+        }
+
+        private void PrikaziNajboljeKnjige()
+        {
+            if (Knjige.Count == 0)
+            {
+                Console.WriteLine("Nema knjiga za prikaz.");
+                return;
+            }
+
+            var najboljeKnjige = Knjige.OrderByDescending(k => k.brojGlasova).ToList();
+
+            Console.WriteLine("************************");
+            Console.WriteLine("Najbolje knjige prema glasovima:");
+
+            foreach (var k in najboljeKnjige)
+            {
+                Console.WriteLine(k);
+            }
+
+            Console.WriteLine("************************");
+        }
+
 
         public void PretraziKnjige()
         {
@@ -101,6 +144,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             PrikaziRezultatePretrage(rezultati);
         }
 
+
         private void PrikaziRezultatePretrage(List<Knjiga> rezultati)
         {
             if (rezultati.Count == 0)
@@ -131,6 +175,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             }
 
         }
+
 
         private void PromjenaPostojecihKnjiga()
         {
