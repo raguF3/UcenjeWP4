@@ -14,10 +14,13 @@ namespace UcenjeCS.LjetniRad.BookClub.Citateljskiklub
         public string? autor { get; set; }
         public DateTime? godina { get; set; }
 
+        public int? ocjena { get; set; }
+
+
 
         public override string ToString()
         {
-            return "sifra=" + sifra + " ,naziv=" + naziv + ", autor=" + autor + ", godina=" + godina;
+            return "sifra=" + sifra + " ,naziv=" + naziv + ", autor=" + autor + ", godina=" + godina + ", ocjena= " + ocjena;
 
         }
     }

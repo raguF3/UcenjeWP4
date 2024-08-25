@@ -28,13 +28,14 @@ namespace UcenjeCS.LjetniRad.BookClub
             Console.WriteLine("2. Unos novih knjiga");
             Console.WriteLine("3. Promjena postojećih knjiga");
             Console.WriteLine("4. Brisanje postojećih knjiga");
-            Console.WriteLine("5. Povratak na glavni izbornik");
+            Console.WriteLine("5. Pretraživanje knjiga");
+            Console.WriteLine("6. Povratak na glavni izbornik");
             OdabirOpcijaIzbornika();
         }
 
         private void OdabirOpcijaIzbornika()
         {
-            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 5))
+            switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 6))
             {
 
                 case 1:
@@ -58,12 +59,65 @@ namespace UcenjeCS.LjetniRad.BookClub
                     PrikaziIzbornik();
                     break;
 
-
                 case 5:
+                    PretraziKnjige();
+                    PrikaziIzbornik();
+                    break;
+
+                case 6:
                     Console.Clear();
                     break;
             }
         }
+
+        public void PretraziKnjige()
+        {
+            Console.WriteLine("Odaberite kriterij pretraživanja:");
+            Console.WriteLine("1. Po nazivu");
+            Console.WriteLine("2. Po autoru");
+            Console.WriteLine("3. Po godini izdavanja");
+
+            int odabir = Pomocno.UcitajRasponBroja("Odaberite opciju", 1, 3);
+            List<Knjiga> rezultati = new List<Knjiga>();
+
+            switch (odabir)
+            {
+                case 1:
+                    string naziv = Pomocno.Ucitajstring("Unesite naziv ili dio naziva knjige", 80, false);
+                    rezultati = Knjige.Where(k => k.naziv.ToLower().Contains(naziv.ToLower())).ToList();
+                    break;
+
+                case 2:
+                    string autor = Pomocno.Ucitajstring("Unesite ime ili dio imena autora", 80, false);
+                    rezultati = Knjige.Where(k => k.autor.ToLower().Contains(autor.ToLower())).ToList();
+                    break;
+
+                case 3:
+                    int godina = Pomocno.UcitajRasponBroja("Unesite godinu izdavanja", 1, DateTime.Now.Year);
+                    rezultati = Knjige.Where(k => k.godina.HasValue && k.godina.Value.Year == godina).ToList();
+                    break;
+            }
+
+            PrikaziRezultatePretrage(rezultati);
+        }
+
+        private void PrikaziRezultatePretrage(List<Knjiga> rezultati)
+        {
+            if (rezultati.Count == 0)
+            {
+                Console.WriteLine("Nema rezultata koji odgovaraju vašem kriteriju pretraživanja.");
+            }
+            else
+            {
+                Console.WriteLine("Pronađene knjige:");
+                foreach (var knjiga in rezultati)
+                {
+                    Console.WriteLine(knjiga);
+                }
+            }
+            Console.WriteLine("*************************");
+        }
+
 
         private void BrisanjePostojecihKnjiga()
         {
@@ -87,7 +141,7 @@ namespace UcenjeCS.LjetniRad.BookClub
             odabrani.naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true);
             odabrani.autor = Pomocno.Ucitajstring("Unesi naziv autora", 80, true);
             odabrani.godina = Pomocno.Ucitajdatum("Unesi godinu izdavanja", true);
-            
+            odabrani.ocjena = Pomocno.UcitajRasponBroja("Unesi ocjenu knjige", 1, 5);
 
         }
 
@@ -116,8 +170,8 @@ namespace UcenjeCS.LjetniRad.BookClub
                 sifra = Pomocno.UcitajRasponBroja("Unesi šifru knjige", 1, int.MaxValue),
                 naziv = Pomocno.Ucitajstring("Unesi naziv knjige", 80, true),
                 autor = Pomocno.Ucitajstring("Unesi ime autora", 80, true),
-                godina=Pomocno.Ucitajdatum("Unesi datum izdavanja", true)
-
+                godina=Pomocno.Ucitajdatum("Unesi datum izdavanja", true),
+                ocjena = Pomocno.UcitajRasponBroja("Unesi ocjenu knjige", 1, 5)
 
             });
         }
