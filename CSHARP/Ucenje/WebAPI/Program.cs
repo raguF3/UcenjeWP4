@@ -1,3 +1,5 @@
+using NuGet.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,7 +15,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI( opcije =>
+    {
+        opcije.ConfigObject.AdditionalItems.Add("requestSnippettsEnabled", true); 
+    });
 }
 
 app.UseHttpsRedirection();
