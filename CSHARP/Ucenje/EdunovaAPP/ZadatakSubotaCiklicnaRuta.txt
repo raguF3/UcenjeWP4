@@ -1,0 +1,6 @@
+Kreirati rutu:
+GET
+/api/v1/Ciklicna
+Ruta prima dva cijela broja (redova, kolona)
+
+Ruta vraæa dvodimenzinalni niz brojeva u kojem se nalazi ciklièna matrica

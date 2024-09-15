@@ -4,11 +4,12 @@ namespace EdunovaAPP.Models
 {
     public class Smjer: Entitet
     {
-        public string? naziv {  get; set; }
-        public int? trajanje { get; set; }
-        public decimal? cijena { get; set; }
-        public DateTime? izvodiseod { get; set; }
-        [Column("verificiran")] // ovo se ne mora u završnom radu raditi
-        public bool? vaucer { get; set; }
+        public string? Naziv { get; set; }
+        public int? Trajanje { get; set; }
+        public decimal? Cijena { get; set; }
+        public DateTime? IzvodiSeOd { get; set; }
+
+        [Column("verificiran")] // Ovo ne morate u svojim završnim radovima raditi
+        public bool? Vaucer { get; set; }
     }
 }
