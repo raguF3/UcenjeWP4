@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+
+
+
+using Microsoft.AspNetCore.Mvc;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class HttpMetodeController : ControllerBase
+    public class HttpMetodeController: ControllerBase
     {
-        //ovdje počinje ruta
+
+         // ovdje počinje ruta
 
         [HttpGet]
         public string Pozdravi()
@@ -15,25 +20,30 @@ namespace WebAPI.Controllers
             return "Hello";
         }
 
-        // ovdje završava
+        // ovdje završava ruta
 
 
-        //ovdje počinje ruta
+
+
+
+        // ovdje počinje ruta
         [HttpGet]
-        [Route("Pozdrav")]
-
+        [Route("pozdrav")]
         public string Pozdravi(string s)
         {
             return "Hello " + s;
         }
-        // ovdje završava
+
+        // ovdje završava ruta
 
 
+
+        // ovdje počinje ruta
         [HttpGet]
-        [Route("Hello")]
+        [Route("hello")]
         public IActionResult Pozdravi(int id, string ime)
         {
-            return Ok(new {sifra = id, naziv = ime});
+            return Ok(new { sifra= id, naziv = ime  });
         }
         // ovdje završava ruta
 
@@ -49,16 +59,16 @@ namespace WebAPI.Controllers
 
         // ovdje počinje ruta
         [HttpPut]
-        public IActionResult Put(Osoba osoba)
+        public IActionResult Put(Osoba osoba) 
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            
             osoba.Ime = osoba.Ime + " promjenio";
 
-            return StatusCode(StatusCodes.Status202Accepted, osoba);
+             return StatusCode(StatusCodes.Status202Accepted, osoba);
 
         }
         // ovdje završava ruta
@@ -66,7 +76,7 @@ namespace WebAPI.Controllers
 
         // ovdje počinje ruta
         [HttpDelete]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id) 
         {
             return NotFound("Nije pronađeno u bazi");
 

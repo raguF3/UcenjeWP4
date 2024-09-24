@@ -1,4 +1,5 @@
 ﻿using EdunovaAPP.Data;
+using EdunovaAPP.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,9 @@ builder.Services.AddCors(opcije =>
     );
 
 });
+
+// uutomapper
+builder.Services.AddAutoMapper(typeof(EdunovaMappingProfile));
 
 
 var app = builder.Build();

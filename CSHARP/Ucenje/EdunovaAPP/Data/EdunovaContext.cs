@@ -11,6 +11,7 @@ namespace EdunovaAPP.Data
         }
 
         public DbSet<Smjer> Smjerovi { get; set; }
+        public DbSet<Polaznik> Polaznici { get; set; }
 
     }
 }
