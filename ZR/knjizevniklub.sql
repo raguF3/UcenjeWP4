@@ -1,4 +1,20 @@
-﻿use master;
+﻿SELECT name, collation_name FROM sys.databases;
+GO
+ALTER DATABASE db_a98acf_wp4 SET SINGLE_USER WITH
+ROLLBACK IMMEDIATE;
+GO
+ALTER DATABASE db_a98acf_wp4 COLLATE Croatian_CI_AS;
+GO
+ALTER DATABASE db_a98acf_wp4 SET MULTI_USER;
+GO
+SELECT name, collation_name FROM sys.databases;
+GO
+
+
+
+
+
+use master;
 go
 drop database if exists KnjizevniKlub;
 go
@@ -93,8 +109,6 @@ insert into knjige (naziv, autor, godina) values
 ('God of War','Rina Kent','2024-06-13');
 insert into knjige (naziv, autor, godina) values
 ('Vicious','Lj Shen','2016-12-27');
-insert into knjige (naziv, autor, godina) values
-('The Office Rival','Kat T. Masen','2015-09-25');
 
 
 
